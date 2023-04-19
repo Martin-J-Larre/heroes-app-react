@@ -1,20 +1,15 @@
 import React from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-import { Marvel, Dc } from "../heroes";
+import { HeroesRoute } from "../heroes";
 import { Login } from "../auth";
-import { Navbar } from "../ui";
 
 export const AppRouter = () => {
   return (
     <div>
-      <Navbar />
       <Routes>
-        <Route path="/marvel" element={<Marvel />} />
-        <Route path="/dc" element={<Dc />} />
-
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/*" element={<HeroesRoute />} />
       </Routes>
     </div>
   );
