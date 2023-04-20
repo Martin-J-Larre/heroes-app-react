@@ -1,4 +1,4 @@
-export * from "./Dc";
+export * from "./DcPage";
 export * from "./Marvel";
 export * from "./Search";
-export * from "./Hero";
+export * from "./HeroPage";

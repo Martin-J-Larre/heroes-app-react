@@ -1,7 +1,7 @@
 import React from "react";
 import { HeroList } from "../components";
 
-export const Dc = () => {
+export const DcPage = () => {
   return (
     <div>
       <h1>DC Comics</h1>
