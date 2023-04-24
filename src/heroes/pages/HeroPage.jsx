@@ -4,24 +4,19 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { getHeroById } from "../helpers";
 
 export const HeroPage = () => {
-  const { id } = useParams();
   const navigate = useNavigate();
+  const { id } = useParams();
+  const heroImg = `/assets/heroes/heroes/${id}.jpg`;
 
   const hero = useMemo(() => getHeroById(id), [id]);
+
+  const onNavigateBack = () => {
+    navigate(-1);
+  };
 
   if (!hero) {
     return <Navigate to="/marvel" />;
   }
-
-  const heroImg = `/assets/heroes/heroes/${id}.jpg`;
-
-  const onNavigateBack = () => {
-    if (hero.publisher === "Marvel Comics") {
-      navigate("/marvel");
-    } else {
-      navigate("/dc");
-    }
-  };
 
   return (
     <div className="row mt-5">
