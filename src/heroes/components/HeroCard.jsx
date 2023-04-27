@@ -8,7 +8,7 @@ export const HeroCard = ({
   first_appearance,
   characters,
 }) => {
-  const heroImg = `/assets/heroes/heroes/${id}.jpg`;
+  const heroImg = `./public/${id}.jpg`;
 
   return (
     <div className="col animate__animated animate__fadeIn">
@@ -25,7 +25,9 @@ export const HeroCard = ({
               <p className="card-text">
                 <small className="text-muted">{first_appearance}</small>
               </p>
-              <Link to={`/hero/${id}`}>more...</Link>
+              <Link className="btn btn-outline-primary" to={`/hero/${id}`}>
+                More...
+              </Link>
             </div>
           </div>
         </div>

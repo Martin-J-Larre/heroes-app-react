@@ -44,7 +44,7 @@ export const Search = () => {
             value={searchText}
             onChange={onInputChange}
           />
-          <button className="btn btn-dark mt-2">Search</button>
+          <button className="btn btn-primary mt-2">Search</button>
         </form>
       </div>
       <div className="col-7">

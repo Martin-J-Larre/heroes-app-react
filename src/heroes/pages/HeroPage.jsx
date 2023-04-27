@@ -6,7 +6,7 @@ import { getHeroById } from "../helpers";
 export const HeroPage = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-  const heroImg = `/assets/heroes/heroes/${id}.jpg`;
+  const heroImg = `./public/${id}.jpg`;
 
   const hero = useMemo(() => getHeroById(id), [id]);
 
@@ -43,7 +43,7 @@ export const HeroPage = () => {
         <h5 className="mt-3">Characters</h5>
         <p>{hero.characters}</p>
 
-        <button className="btn btn-outline-dark" onClick={onNavigateBack}>
+        <button className="btn btn-outline-primary" onClick={onNavigateBack}>
           Back
         </button>
       </div>
