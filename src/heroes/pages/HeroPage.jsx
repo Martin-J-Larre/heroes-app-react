@@ -6,7 +6,7 @@ import { getHeroById } from "../helpers";
 export const HeroPage = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-  const heroImg = `./public/${id}.jpg`;
+  const heroImg = `/heroes/${id}.jpg`;
 
   const hero = useMemo(() => getHeroById(id), [id]);
 
