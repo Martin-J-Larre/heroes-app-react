@@ -34,7 +34,7 @@ export const Search = () => {
       <div className="col-5">
         <h4>Searching</h4>
         <hr />
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} aria-label="form">
           <input
             type="text"
             placeholder="Search a hero"
